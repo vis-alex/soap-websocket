@@ -14,7 +14,7 @@
     <name>soap-websocket</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -33,6 +33,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -49,16 +50,14 @@
                     <execution>
                         <id>xjc</id>
                         <goals>
-                            <goal>
-                                xjc
-                            </goal>
+                            <goal>xjc</goal>
                         </goals>
                     </execution>
                 </executions>
 
                 <configuration>
                     <schemaDirectory>
-                        ${project.basedir}/src/main/resources
+                        ${project.basedir}/src/main/resources/
                     </schemaDirectory>
                     <outputDirectory>
                         ${project.basedir}/src/main/java
